@@ -19,7 +19,7 @@ Inserir mercadorias na tabela hash e verificar se elas são inseridas corretamen
 - As mercadorias foram inseridas na tabela hash.
 - As informações das mercadorias estão corretamente associadas às chaves correspondentes na tabela hash.
 
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 
 ## Teste 2: Remoção de Mercadorias
 
@@ -39,7 +39,7 @@ Remover uma mercadoria da tabela hash e verificar se a remoção é bem-sucedida
 - A mercadoria com a chave 201 (caderno) foi removida corretamente.
 - As outras mercadorias permaneceram na tabela hash após a remoção.
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 ## Teste 3: Busca de Mercadorias
 
@@ -58,7 +58,7 @@ Buscar uma mercadoria na tabela hash e verificar se ela é encontrada.
 - A mercadoria com a chave 332 (lápis) foi encontrada na tabela hash.
 - O nome da mercadoria foi exibido após a busca.
 
-![alt text](image-3.png)
+![alt text](assets/image-3.png)
 
 ## Teste 4: Verificação de Tabela Vazia
 
@@ -79,9 +79,9 @@ Verificar se a função `isEmpty` retorna corretamente se a tabela hash está va
 - A função `isEmpty` retornou verdadeiro quando a tabela hash estava vazia e falso após a inserção de mercadorias, conforme esperado.
 - A mensagem "A tabela Hash está vazia." foi exibida quando a tabela estava vazia, e "A tabela Hash não está vazia." após a inserção de mercadorias.
 
-![alt text](image-4.png)
+![alt text](assets/image-4.png)
 
-![alt text](image-5.png)
+![alt text](assets/image-5.png)
 
 ## Teste 5: Verificação de Colisão
 
@@ -101,4 +101,4 @@ Verificar se a tabela hash lida corretamente com a situação de colisão, ou se
 - As duas mercadorias foram inseridas corretamente na mesma lista encadeada correspondente ao índice hash com colisão.
 - As duas mercadorias foram encontradas na mesma lista encadeada e associadas a chaves diferentes, indicando que a tabela hash lidou corretamente com a colisão.
 
-![alt text](image-6.png)
+![alt text](assets/image-6.png)
