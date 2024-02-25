@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-// Definição da estrutura de dados para mercadorias
+// Definição da estrutura de dados para uma mercadoria
 struct Mercadoria {
     string nome;
 };
@@ -19,6 +19,7 @@ public:
     void removeItem(int key);
     Mercadoria* searchItem(int key);
     void displayTable();
+    void collisionTest(); // Nova função para testar colisões
 };
 
 bool HashTable::isEmpty() const {
@@ -94,34 +95,55 @@ void HashTable::displayTable() {
     return;
 }
 
+void HashTable::collisionTest() {
+    // Teste 5: Verificação de Colisão
+    // Inserir uma mercadoria com uma chave que cause colisão
+    int key = 10; // Chave que causará colisão
+    Mercadoria colisao1 = {"Lápis"}; // Exemplo de mercadoria
+    insertItem(key, colisao1);
+
+    // Inserir outra mercadoria com uma chave diferente que também cause colisão
+    key += hashGroups; // Incrementar a chave para evitar substituição
+    Mercadoria colisao2 = {"Caderno"}; // Exemplo de outra mercadoria
+    insertItem(key, colisao2);
+
+    // Exibir a tabela após a inserção das mercadorias com colisão
+    cout << "\n[INFO] Exibindo tabela após inserção das mercadorias com colisão:"
+         << endl;
+    displayTable();
+}
+
 int main() {
     HashTable HT;
     Mercadoria canetaBIC = {"Caneta BIC"};
     Mercadoria caderno = {"Caderno"};
     Mercadoria lapis = {"Lápis"};
 
-    // Caso de Teste 1: Inserção de Mercadorias
+    // Teste 1: Inserção de Mercadorias
     HT.insertItem(905, canetaBIC);
     HT.insertItem(201, caderno);
     HT.insertItem(332, lapis);
 
-    // Exibe a tabela após a inserção
+    // Exibir a tabela após a inserção
+    cout << "[INFO] Exibindo tabela após inserção das mercadorias:" << endl;
     HT.displayTable();
 
-    // Caso de Teste 2: Remoção de Mercadorias
+    // Teste 2: Remoção de Mercadorias
     HT.removeItem(201);
-
-    // Exibir a tabela após a remoção
+    cout << "\n[INFO] Exibindo tabela após remoção da mercadoria:" << endl;
     HT.displayTable();
 
-    // Caso de Teste 3: Busca de Mercadorias
+    // Teste 3: Busca de Mercadorias
     HT.searchItem(332);
 
-    // Verifica se a tabela hash está vazia
+    // Teste 4: Verificação de Tabela Vazia
     if (HT.isEmpty())
-        cout << "A tabela Hash está vazia." << endl;
+        cout << "\nA tabela Hash está vazia." << endl;
     else
-        cout << "A tabela Hash não está vazia." << endl;
+        cout << "\nA tabela Hash não está vazia." << endl;
+
+    // Teste 5: Verificação de Colisão
+    HT.collisionTest();
 
     return 0;
 }

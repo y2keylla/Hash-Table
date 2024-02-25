@@ -70,3 +70,21 @@ Verificar se a função `isEmpty` retorna corretamente se a tabela hash está va
 ### Resultado Real:
 - A função `isEmpty` retornou verdadeiro quando a tabela hash estava vazia e falso após a inserção de mercadorias, conforme esperado.
 - A mensagem "A tabela Hash está vazia." foi exibida quando a tabela estava vazia, e "A tabela Hash não está vazia." após a inserção de mercadorias.
+
+## Teste 5: Verificação de Colisão
+
+### Descrição:
+Verificar se a tabela hash lida corretamente com a situação de colisão, ou seja, quando duas chaves diferentes resultam no mesmo índice hash.
+
+### Passos:
+1. Inserir uma mercadoria na tabela hash com uma chave que resulte no mesmo índice hash de uma mercadoria já existente.
+2. Inserir outra mercadoria com uma chave diferente que resulte no mesmo índice hash, causando colisão.
+3. Verificar se ambas as mercadorias estão presentes na mesma lista encadeada correspondente ao índice hash.
+
+### Resultados Esperados:
+- A tabela hash deve lidar corretamente com a colisão, inserindo ambas as mercadorias na mesma lista encadeada correspondente ao índice hash.
+- As duas mercadorias devem ser encontradas na mesma lista encadeada e associadas a chaves diferentes.
+
+### Resultados Reais:
+- As duas mercadorias foram inseridas corretamente na mesma lista encadeada correspondente ao índice hash com colisão.
+- As duas mercadorias foram encontradas na mesma lista encadeada e associadas a chaves diferentes, indicando que a tabela hash lidou corretamente com a colisão.
