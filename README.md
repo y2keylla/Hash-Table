@@ -123,3 +123,6 @@ Verifica se o contrato é capaz de autenticar corretamente um novo usuário.
 - O evento `NewUser` foi emitido após o registro do novo usuário, registrando corretamente o endereço de carteira do novo usuário.
 - A função `users` retornou verdadeiro para o endereço de carteira do novo usuário, indicando que o usuário foi autenticado com sucesso.
 
+[![Autenticação de Usuário](https://img.youtube.com/GoJ-jguQhO4/maxresdefault.jpg)](https://www.youtube.com/watch?v=GoJ-jguQhO4)
+
+
