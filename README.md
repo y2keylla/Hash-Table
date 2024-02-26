@@ -95,12 +95,31 @@ Verificar se a tabela hash lida corretamente com a situação de colisão, ou se
 2. Inserir outra mercadoria com uma chave diferente que resulte no mesmo índice hash, causando colisão.
 3. Verificar se ambas as mercadorias estão presentes na mesma lista encadeada correspondente ao índice hash.
 
-#### Resultados Esperados:
+#### Resultado Esperado:
 - A tabela hash deve lidar corretamente com a colisão, inserindo ambas as mercadorias na mesma lista encadeada correspondente ao índice hash.
 - As duas mercadorias devem ser encontradas na mesma lista encadeada e associadas a chaves diferentes.
 
-#### Resultados Reais:
+#### Resultado Real:
 - As duas mercadorias foram inseridas corretamente na mesma lista encadeada correspondente ao índice hash com colisão.
 - As duas mercadorias foram encontradas na mesma lista encadeada e associadas a chaves diferentes, indicando que a tabela hash lidou corretamente com a colisão.
 
 ![Verificação de Colisão](assets/image-6.png)
+
+### Teste 6: Autenticação de Usuário
+
+#### Descrição:
+Verifica se o contrato é capaz de autenticar corretamente um novo usuário.
+
+#### Passos:
+1. Chamar a função `userRegistration` com o endereço de carteira de um novo usuário como argumento.
+2. Verificar se o evento `NewUser` é emitido após o registro do novo usuário.
+3. Verificar se a função `users` retorna verdadeiro para o endereço de carteira do novo usuário.
+
+#### Resultado Esperado:
+- Após o registro do novo usuário, o evento `NewUser` deve ser emitido, registrando o endereço de carteira do novo usuário.
+- A função `users` deve retornar verdadeiro para o endereço de carteira do novo usuário, indicando que o usuário está autenticado com sucesso.
+
+#### Resultado Real:
+- O evento `NewUser` foi emitido após o registro do novo usuário, registrando corretamente o endereço de carteira do novo usuário.
+- A função `users` retornou verdadeiro para o endereço de carteira do novo usuário, indicando que o usuário foi autenticado com sucesso.
+
