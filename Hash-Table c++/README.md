@@ -125,4 +125,11 @@ Verifica se o contrato é capaz de autenticar corretamente um novo usuário.
 
 [![Autenticação de Usuário](https://img.youtube.com/GoJ-jguQhO4/maxresdefault.jpg)](https://www.youtube.com/watch?v=GoJ-jguQhO4)
 
+## 🎓 Referências
 
+JESUS, C. C Hash Table Implementation. YouTube, 14 out. 2019. Disponível em: <https://www.youtube.com/watch?v=2_3fR-k-LzI>. Acesso em: 24 fev. 2024
+
+OpenAI. "ChatGPT é uma inteligência artificial de linguagem natural desenvolvida pela OpenAI, que usa uma arquitetura de rede neural para gerar respostas a perguntas feitas por usuários." Disponível em: <https://chat.openai.com/>. Acesso em: 24 fev. de 2024.
+
+
+‌
